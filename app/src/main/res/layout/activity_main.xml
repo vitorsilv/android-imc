@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:id="@+id/tv_nome"
+
+        android:text="Diga sua nome:"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/et_nome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome"
+
+        android:layout_marginTop="15sp"
+
+        android:hint="Nome"
+        android:inputType="text"
+    />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:id="@+id/tv_altura"
+
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+
+        android:text="Diga sua altura:"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+
+        android:textSize="20sp"
+    />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/et_altura"
+
+        android:layout_marginTop="15sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_altura"
+
+        android:hint="Metros"
+        android:inputType="numberDecimal"
+    />
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        app:layout_constraintLeft_toRightOf="@+id/tv_altura"
+        android:layout_marginLeft="45sp"
+
+        android:id="@+id/tv_peso"
+
+        android:text="Diga seu peso:"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+
+        android:textSize="20sp"
+    />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/et_peso"
+
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="120sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_peso"
+        app:layout_constraintLeft_toRightOf="@+id/et_altura"
+
+        android:inputType="numberDecimal"
+        android:hint="Quilos"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/bt_calc"
+
+        app:layout_constraintTop_toBottomOf="@id/et_altura"
+
+        android:onClick="calcularIMC"
+
+        android:text="Calcular"
+    />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/tv_resposta"
+
+        app:layout_constraintTop_toBottomOf="@+id/bt_calc"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
